@@ -360,10 +360,10 @@ public class Main {
 							double m2 = desordem.get(j);
 							if(m2 > m1) {
 								m1 = m2;
-								desordem.add(j, aux);
+								desordem.set(j, aux);
+								desordem.set(i , m1);
 							}
-						}
-						desordem.add(i , m1);
+						}	
 					}
 					
 					System.out.println("A ordem decrescente eh: ");
@@ -387,9 +387,9 @@ public class Main {
 							if(m2 > m1) {
 								m1 = m2;
 								desordem.add(j, aux);
+								desordem.add(i, m1);
 							}
 						}
-						desordem.add(i, m1);
 					}
 					
 					System.out.println("A ordem decrescente eh: ");
@@ -412,10 +412,10 @@ public class Main {
 							double m2 = desordem.get(j);
 							if(m2 > m1) {
 								m1 = m2;
-								desordem.add(j, aux);
+								desordem.set(j, aux);
+								desordem.set(i, m1);
 							}
 						}
-						desordem.add(i, m1);
 					}
 					
 					System.out.println("A ordem decrescente eh: ");

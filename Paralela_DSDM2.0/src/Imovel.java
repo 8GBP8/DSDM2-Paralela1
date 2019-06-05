@@ -1,10 +1,17 @@
 
 public class Imovel {
+	private int Id;
 	private String Proprietario;
 	private String Endereco;
 	private double Tamanho;
 	private int Ano;
 	
+	public int getId() {
+		return Id;
+	}
+	public void setId(int id) {
+		Id = id;
+	}	
 	public String getProprietario() {
 		return Proprietario;
 	}
@@ -28,5 +35,11 @@ public class Imovel {
 	}
 	public void setAno(int ano) {
 		Ano = ano;
+	}
+	
+	public double CalcularImposto () {
+		double tamanho = getTamanho();
+		double imposto = 10.7 * tamanho;
+		return imposto;
 	}
 }
