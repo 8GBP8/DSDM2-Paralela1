@@ -1,19 +1,30 @@
 
-public class CasaCon extends Imovel{
-	
-	private String Condominio;
+public class CasaCon extends Imovel {
+//	implements Comparable<CasaCon> {
 
-	public String getCondominio() {
-		return Condominio;
-	}
-
-	public void setCondominio(String condominio) {
-		Condominio = condominio;
-	}
+		private String Condominio;
 	
-	public double CalcularImposto () {
-		double tamanho = getTamanho();
-		double imposto = 9.0 * tamanho;
-		return imposto;
+		public String getCondominio() {
+			return Condominio;
+		}
+	
+		public void setCondominio(String condominio) {
+			Condominio = condominio;
+		}
+		
+		public double CalcularImposto () {
+			double tamanho = getTamanho();
+			double imposto = 9.0 * tamanho;
+			return imposto;
+		}
+		
+	//	public int compareTo(CasaCon imovel) {
+		//	if (getTamanho() < imovel.getTamanho()) {
+			//	return 1;
+		//	}else if (getTamanho() > imovel.getTamanho()) {
+		//		return -1;
+		//	}
+			
+		//	return 0;
+	//	}
 	}
-}
