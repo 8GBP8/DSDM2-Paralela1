@@ -353,17 +353,20 @@ public class Main {
 						desordem.add(nump);
 					}
 					
-					for(int i = 0; i < desordem.size(); i++) {
-						double m1 = desordem.get(i);
-						double aux = m1;
-						for(int j = 0; j < desordem.size(); j++) {
-							double m2 = desordem.get(j);
-							if(m2 > m1) {
-								m1 = m2;
-								desordem.set(j, aux);
-								desordem.set(i , m1);
+					double m1;
+					double m2;
+					double m3;
+					
+					for(int i = desordem.size() - 1;i >= 0; i--) {
+						for(int j = 1;j <= i; j++) {
+							m1 = desordem.get(j-1);
+							m2 = desordem.get(j);
+							if(m1 < m2) {
+								m3 = m1;
+								desordem.set(j-1, m2);
+								desordem.set(j, m3);
 							}
-						}	
+						}
 					}
 					
 					System.out.println("A ordem decrescente eh: ");
@@ -379,15 +382,18 @@ public class Main {
 						desordem.add(nump);
 					}
 					
-					for(int i = 0; i < desordem.size(); i++) {
-						double m1 = desordem.get(i);
-						double aux = m1;
-						for(int j = 0; j < desordem.size(); j++) {
-							double m2 = desordem.get(j);
-							if(m2 > m1) {
-								m1 = m2;
-								desordem.add(j, aux);
-								desordem.add(i, m1);
+					double p1;
+					double p2;
+					double p3;
+					
+					for(int i = desordem.size() - 1;i >= 0; i--) {
+						for(int j = 1;j <= i; j++) {
+							p1 = desordem.get(j-1);
+							p2 = desordem.get(j);
+							if(p1 < p2) {
+								p3 = p1;
+								desordem.set(j-1, p2);
+								desordem.set(j, p3);
 							}
 						}
 					}
@@ -404,16 +410,18 @@ public class Main {
 						nump = s.getValor();
 						desordem.add(nump);
 					}
+					double s1;
+					double s2;
+					double s3;
 					
-					for(int i = 0; i < desordem.size(); i++) {
-						double m1 = desordem.get(i);
-						double aux = m1;
-						for(int j = 0; j < desordem.size(); j++) {
-							double m2 = desordem.get(j);
-							if(m2 > m1) {
-								m1 = m2;
-								desordem.set(j, aux);
-								desordem.set(i, m1);
+					for(int i = desordem.size() - 1;i >= 0; i--) {
+						for(int j = 1;j <= i; j++) {
+							s1 = desordem.get(j-1);
+							s2 = desordem.get(j);
+							if(s1 < s2) {
+								s3 = s1;
+								desordem.set(j-1, s2);
+								desordem.set(j, s3);
 							}
 						}
 					}
